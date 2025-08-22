@@ -3,7 +3,7 @@ import { Button } from "../../../../components/ui/button";
 import { Input } from "../../../../components/ui/input";
 import { Separator } from "../../../../components/ui/separator";
 import { FaDribbble, FaFacebook, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
-
+import logo from '../../../../assets/images/Logo.png'
 const footerLinks = {
   company: [
     { label: "About Us", href: "#" },
@@ -109,7 +109,7 @@ export const FooterSubsection = (): JSX.Element => {
                 <img
                   className=" h-10"
                   alt="Logo wrap"
-                  src="./public/logo.png"
+                  src={logo}
                 />
               </div>
 

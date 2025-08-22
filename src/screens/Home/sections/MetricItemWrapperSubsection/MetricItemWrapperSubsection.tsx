@@ -98,7 +98,7 @@ export const MetricItemWrapperSubsection = (): JSX.Element => {
               </div>
             ))}
 
-            <Button variant="ghost" size="sm" className="h-auto p-2 mt-2 text-gray-500 hover:text-gray-700">
+            <Button variant="ghost" size="sm" className="h-auto p-2  text-gray-500 hover:text-gray-700">
               <ChevronDownIcon className="w-[18px] h-[18px]" />
             </Button>
           </div>
@@ -115,7 +115,7 @@ export const MetricItemWrapperSubsection = (): JSX.Element => {
             <Button
               variant="secondary"
               size="sm"
-              className="absolute top-1/2 left-4 transform -translate-y-1/2 h-10 w-10 p-0 bg-white rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-200"
+              className="absolute top-1/2 left-4 transform -translate-y-1/2 h-10 w-10 p-0 bg-white rounded-lg shadow-lg hover:bg-red-500 hover:text-white transition-all duration-200"
               onClick={handlePrevSlide}
             >
               <ChevronLeftIcon className="w-5 h-5" />
@@ -124,7 +124,7 @@ export const MetricItemWrapperSubsection = (): JSX.Element => {
             <Button
               variant="secondary"
               size="sm"
-              className="absolute top-1/2 right-4 transform -translate-y-1/2 h-10 w-10 p-0 bg-white rounded-lg shadow-lg hover:bg-gray-50 transition-all duration-200"
+              className="absolute top-1/2 right-4 transform -translate-y-1/2 h-10 w-10 p-0 bg-white rounded-lg shadow-lg hover:bg-red-500 hover:text-white transition-all duration-200"
               onClick={handleNextSlide}
             >
               <ChevronRightIcon className="w-5 h-5" />

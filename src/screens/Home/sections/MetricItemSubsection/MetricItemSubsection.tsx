@@ -3,31 +3,44 @@ import React from "react";
 import { Button } from "../../../../components/ui/button";
 import { Card, CardContent } from "../../../../components/ui/card";
 import { Separator } from "../../../../components/ui/separator";
+import car1 from '../../../../assets/images/quick/car1.png';
+import car2 from '../../../../assets/images/quick/car2.png';
+import car3 from '../../../../assets/images/quick/car3.png';
+import car4 from '../../../../assets/images/quick/car4.png';
+import car5 from '../../../../assets/images/quick/car5.png';
+import car6 from '../../../../assets/images/quick/car6.png';
+import car7 from '../../../../assets/images/quick/car7.png';
+import car8 from '../../../../assets/images/quick/car8.png';
 
+import service1 from '../../../../assets/images/quick/service1.png';
+import service2 from '../../../../assets/images/quick/service2.png';
+import service3 from '../../../../assets/images/quick/service3.png';
+import service4 from '../../../../assets/images/quick/service4.png';
+import service5 from '../../../../assets/images/quick/service5.png';
 export const MetricItemSubsection = (): JSX.Element => {
   const vehicleTypes = [
     {
       id: 1,
       label: "Compact",
-      image: "/public/quick/car1.png",
+      image: car1,
       className: "w-[70px] h-[30px] top-[15px] left-0",
     },
     {
       id: 2,
       label: "Sedan",
-      image: "/public/quick/car2.png",
+      image:car2,
       className: "w-[69px] h-[41px] top-[11px] left-px",
     },
     {
       id: 3,
       label: "SUV",
-      image: "/public/quick/car3.png",
+      image:car3,
       className: "w-[70px] h-[25px] top-[18px] left-0 object-cover",
     },
     {
       id: 4,
       label: "Pickup Truck",
-      image: "/public/quick/car4.png",
+      image:car4,
       className: "w-[70px] h-[27px] top-4 left-0",
     },
   ];
@@ -36,25 +49,25 @@ export const MetricItemSubsection = (): JSX.Element => {
     {
       id: 5,
       label: "Coupe",
-      image: "/public/quick/car5.png",
+      image:car5,
       className: "w-[70px] h-[30px] top-[15px] left-0 object-cover",
     },
     {
       id: 6,
       label: "Convertible",
-        image: "/public/quick/car6.png",
+        image:car6,
       className: "w-[76px] h-[39px] top-0 left-0",
     },
     {
       id: 7,
       label: "Minivan",
-         image: "/public/quick/car7.png",
+         image:car7,
       className: "w-[70px] h-[37px] top-3.5 left-0 object-cover",
     },
     {
       id: 8,
       label: "Minivan",
-      image: "/public/quick/car8.png",
+      image:car8,
       className: "w-[74px] h-[51px] top-[5px] left-0",
     },
   ];
@@ -63,31 +76,31 @@ export const MetricItemSubsection = (): JSX.Element => {
     {
       id: 1,
       label: "Petrol",
-      image: "/public/quick/service1.png",
+      image:service1,
       className: "w-[33px] h-8",
     },
     {
       id: 2,
       label: "Petrol",
-      image: "/public/quick/service2.png",
+      image: service2,
       className: "w-[18.1px] h-8",
     },
     {
       id: 3,
       label: "Petrol",
-      image: "/public/quick/service3.png",
+      image:service3,
       className: "w-[29px] h-8",
     },
     {
       id: 4,
       label: "Electric",
-      image: "/public/quick/service4.png",
+      image: service4,
       className: "w-4 h-8",
     },
     {
       id: 5,
       label: "Electric",
-      image: "/public/quick/service5.png",
+      image: service5,
       className: "w-8 h-8",
     },
   ];

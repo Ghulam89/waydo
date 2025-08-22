@@ -1,10 +1,10 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
-
+import banner from '../../../../assets/images/banner.png';
 export const FrameSubsection = (): JSX.Element => {
   return (
     <section style={{ 
-    backgroundImage: `url('./public/banner.png')`,
+    backgroundImage: `url(${banner})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'

@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "../../../../components/ui/button";
 import { Separator } from "../../../../components/ui/separator";
-
+import verified from '../../../../assets/images/icons/verified.png';
 export const VerifySubsection = (): JSX.Element => {
   return (
     <section className="flex flex-col w-full items-start justify-center gap-2.5 px-10 py-8 bg-indigo-600 rounded-2xl">
@@ -13,7 +13,7 @@ export const VerifySubsection = (): JSX.Element => {
                 <img
                   className=""
                   alt="Vector"
-                  src={'./public/icons/verified.png'}
+                  src={verified}
                 />
               </div>
 

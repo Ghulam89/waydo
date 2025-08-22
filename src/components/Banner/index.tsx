@@ -39,7 +39,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                         <div className="relative h-full w-full">
                             <img 
-                                  src={banner1}  
+                                  src={banner2}  
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />

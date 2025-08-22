@@ -1,5 +1,5 @@
 import React from "react";
-
+import img from '../../../../assets/images/ads.png'
 export const FlexcontainerWrapperSubsection = (): JSX.Element => {
   const textLines = [
     {
@@ -35,7 +35,7 @@ export const FlexcontainerWrapperSubsection = (): JSX.Element => {
         ))}
       </div>
     </section> */}
-    <img src="./public/ads.png" />
+    <img src={img} />
     </>
   
   );
