@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import profile from '../../../../assets/images/profile.png';
 const DropdownUser = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const trigger = useRef<any>(null);
@@ -40,7 +40,7 @@ const DropdownUser = () => {
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="flex items-center gap-2"
       >
-        <img src="./public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
+        <img src={profile} className="w-10 h-10 rounded-full" alt="User" />
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#667085" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>

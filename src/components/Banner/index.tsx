@@ -3,6 +3,8 @@ import { Swiper, SwiperSlide } from "swiper/react"
 import { DownSubsection } from "../../screens/Home/sections/DownSubsection/DownSubsection";
 import "swiper/css";
 import "swiper/css/autoplay";
+import banner1 from '../../assets/images/banner1.png';
+import banner2 from '../../assets/images/banner2.png';
 interface BannerProps {
     withFilter?: boolean;
     onSearch?: () => void;
@@ -25,7 +27,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                         <div className="relative h-full w-full">
                             <img 
-                                src={'./public/banner1.png'} 
+                                src={banner1} 
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />
@@ -37,7 +39,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                         <div className="relative h-full w-full">
                             <img 
-                                  src={'./public/banner2.png'}  
+                                  src={banner1}  
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />

@@ -8,6 +8,8 @@ import { SaveSearchModal } from "../../../../components/SavesSearchModal/SavesSe
 import DropdownUser from "../DropdownUser";
 import { NotificationsDropdown } from "../../../../components/NotificationsModal/NotificationsModal";
 import { Link } from "react-router-dom";
+import logo from '../../../../assets/images/logo.png';
+
 const navigationItems = [
   {
     icon: (
@@ -115,7 +117,7 @@ export const NavbarSubsection = (): JSX.Element => {
               <img
                 className="w-[100px] md:w-[142px] h-11"
                 alt="Logo wrap"
-                src="./public/logo.png"
+                src={logo}
               />
               <Button
                 variant="ghost"
