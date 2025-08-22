@@ -67,7 +67,7 @@ const DropdownUser = () => {
 
         {/* Top User Info */}
         <div className="px-4 py-4 border-b border-gray-200 flex items-center gap-3">
-          <img src="./public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
+          <img src={profile} className="w-10 h-10 rounded-full" alt="User" />
           <div>
             <p className="text-sm font-semibold text-gray-800">Olivia Rhye</p>
             <p className="text-xs text-gray-500">olivia@waydo.com</p>

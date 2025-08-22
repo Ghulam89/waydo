@@ -22,7 +22,10 @@ import { Button } from "../../components/ui/button";
 import { NavbarSubsection } from "../Home/sections/NavbarSubsection/NavbarSubsection";
 import { FooterSubsection } from "../Home/sections/FooterSubsection/FooterSubsection";
 import { Card } from "../../components/ui/card";
-
+import brand from '../../assets/images/brand.png';
+import verified from '../../assets/images/icons/verified.png';
+import map from '../../assets/images/map.png';
+import ads from '../../assets/images/ads.png';
 const CarDetailsPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorited, setIsFavorited] = useState(false);
@@ -549,7 +552,7 @@ const CarDetailsPage = () => {
               <p className="  text-gray-500 mb-4">London</p>
               <div className="bg-gray-100 rounded-lg  flex items-center justify-center">
                 <img
-                  src="./public/map.png"
+                  src={map}
                   className=" object-cover h-fll w-full"
                   alt=""
                 />
@@ -600,13 +603,13 @@ const CarDetailsPage = () => {
               <div className="flex border-b items-center gap-4 p-4">
                 <div className="w-20 h-20 border p-1  relative rounded-md flex items-center justify-center">
                   <img
-                    src="./public/brand.png"
+                    src={brand}
                     className=" w-full h-full"
                     alt=""
                   />
                   <div className=" absolute -bottom-2 -left-3">
                     <img
-                      src="./public/icons/verified.png"
+                      src={verified}
                       className=" w-9"
                       alt=""
                     />
@@ -636,7 +639,7 @@ const CarDetailsPage = () => {
                   <Button className=" mt-3">Verify Now</Button>
                 </div>
                 <div>
-                  <img src="./public/icons/verified.png" className=" w-8" />
+                  <img src={verified} className=" w-8" />
                 </div>
               </div>
 
@@ -702,7 +705,7 @@ const CarDetailsPage = () => {
             </Card>
 
             {/* Get Your Car Listed */}
-            <img src="./public/ads.png" className=" w-full" />
+            <img src={ads} className=" w-full" />
           </div>
         </div>
 

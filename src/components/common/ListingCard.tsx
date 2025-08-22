@@ -15,7 +15,7 @@ import {
   Image as ImageIcon,
 } from "lucide-react";
 import { Button } from "../ui/button";
-
+import car1 from '../../assets/images/cars/car1.png';
 export default function ListingCard() {
   const data = {
     price: "$42,500",
@@ -31,10 +31,10 @@ export default function ListingCard() {
     likes: 12,
     boostExpires: "Jan 17",
     images: [
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=600&auto=format&fit=crop",
+      car1,
+      car1,
+      car1,
+     car1,
     ],
   };
 
