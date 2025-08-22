@@ -1,13 +1,13 @@
 
 import { ChartBar, HeartIcon, PhoneCallIcon } from "lucide-react";
-
+import car1 from '../../assets/images/cars/car1.png';
 const CarCard = () => {
   return (
     <div className=" bg-white rounded-2xl border p-3 flex flex-col md:flex-row gap-4 shadow hover:shadow-lg transition">
       {/* Left: Car Image */}
       <div className="relative w-full md:w-1/3">
         <img
-          src="./public/cars/car1.png"
+          src={car1}
           alt="Car"
           className="rounded-xl object-cover w-full  h-full"
         />

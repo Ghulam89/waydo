@@ -2,7 +2,7 @@
 import { FiHome, FiBriefcase, FiPlus } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
-
+import address from '../../assets/images/icons/no-address.png';
 export default function MyAddress() {
   return (
     <div className="w-full py-10">
@@ -32,7 +32,7 @@ export default function MyAddress() {
 
           {/* Illustration */}
           <img
-            src="./public/icons/no-address.png"
+            src={address}
             alt="No Address"
             className=" mb-5"
           />

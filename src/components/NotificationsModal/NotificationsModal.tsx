@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { DropdownModal } from "../ui/DropdownModal";
-
+import notification from '../../assets/images/icons/notification.png';
+import car from '../../assets/images/cars/car1.png';
 // Notifications Dropdown Component
 interface NotificationsDropdownProps {
   isOpen: boolean;
@@ -67,7 +68,7 @@ export const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({
           {notifications.length === 0 ? (
             <div className="flex flex-col items-center justify-center ">
               <img
-                src="./public/icons/notification.png"
+                src={notification}
                 className=""
                 alt="No notifications"
               />
@@ -87,7 +88,7 @@ export const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({
                 >
                   <div className="rounded-md w-10 h-10 flex-shrink-0">
                     <img
-                      src="./public/cars/car1.png"
+                      src={car}
                       className="object-cover rounded-lg w-full h-full"
                       alt="notification icon"
                     />

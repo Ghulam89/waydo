@@ -3,7 +3,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Input } from '../../components/ui/input';
 import { Button } from '../../components/ui/button';
 import { Card } from '../../components/ui/card';
-
+import map from '../../assets/images/map.png';
 const AdPostingForm: React.FC = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -42,13 +42,48 @@ const AdPostingForm: React.FC = () => {
 
   
 const colors = ['White', 'Grey', 'Blue', 'Red', 'Green', 'Yellow', 'Black', 'Brown', 'Orange', 'Cameo', 'Grey'];
-const fuelTypes = ['Diesel', 'Electric', 'E85/LPG', 'Hybrid'];
+
+  const fuelTypes = [
+  { name: 'Diesel'},
+  { name: 'Electric'},
+  { name: 'E85/LPG'},
+  { name: 'Hybrid'}
+];
 const vehicleConditions = ['New','Used']
-const transmissions = ['Automatic', 'Manual'];
-const driveTypes = ['Front-Wheel Drive (FWD)', 'Rear-Wheel Drive (RWD)', 'All-Wheel Drive (AWD)', 'Part-Time 4WD', 'Full-Time 4WD (4WD)'];
-const seatingCapacity = ['2 seats', '4 seats', '5 seats', '7 seats', '8 seats'];
-const engineCylinders = ['3 cylinders', '4 cylinders', '5 cylinders', '6 cylinders', '8 cylinders', '10 cylinders'];
+  const transmissions = [
+  { name: 'Automatic'},
+  { name: 'Manual'},
+  { name: 'E85/LPG'},
+  { name: 'Hybrid'}
+];
+
+ const driveTypes = [
+  { name: 'Front-Wheel Drive (FWD)'},
+  { name: 'Rear-Wheel Drive (RWD)'},
+  { name: 'All-Wheel Drive (AWD)'},
+  { name: 'Part-Time 4WD'},
+  { name: 'Full-Time 4WD (4WD)'}
+];
+
+
+ const seatingCapacity = [
+  { name: '2 seats'},
+  { name: '4 seats'},
+  { name: '5 seats'},
+  { name: '7 seats'},
+  { name: '8 seats'}
+];
+
+ const engineCylinders = [
+  { name: '3 cylinders'},
+  { name: '4 cylinders'},
+  { name: '5 cylinders'},
+  { name: '6 cylinders'},
+  { name: '8 cylinders'},
+  { name: '10 cylinders'}
+];
 const vehicleConditionOptions = ['New', 'Used'];
+
 
 
 
@@ -56,40 +91,58 @@ const vehicleConditionOptions = ['New', 'Used'];
     'Sunroof / Moonroof', 'Waterflood (Cracked block)', 'CDX Player', 'Replace Battery'
   ];
 
+  const vehicleColors = [
+  { name: 'White', code: '#FFFFFF' },
+  { name: 'Gray', code: '#C0C0C0' },
+  { name: 'Blue', code: '#0000FF' },
+  { name: 'Red', code: '#FF0000' },
+  { name: 'Green', code: '#00FF00' },
+  { name: 'Yellow', code: '#FFFF00' },
+  { name: 'Black', code: '#000000' },
+  { name: 'Brown', code: '#A52A2A' },
+  { name: 'Orange', code: '#FFA500' },
+  { name: 'Cream', code: '#FFFDD0' }
+];
 
-  function SectionSelector({
-  title,
-  options,
-  selected,
-  onSelect,
-}: {
-  title: string;
-  options: string[];
-  selected: string;
-  onSelect: (val: string) => void;
-}) {
+const interiorColors = [
+  { name: 'White', code: '#FFFFFF' },
+  { name: 'Black', code: '#000000' },
+  { name: 'Cream', code: '#FFFDD0' },
+  { name: 'Brown', code: '#A52A2A' },
+  { name: 'Gray', code: '#C0C0C0' }
+];
+
+
+const SectionSelector = ({ title, options, selected, onSelect }) => {
   return (
     <div className="mb-6">
-      <p className="mb-3 font-medium text-gray-700">{title}</p>
-      <div className="flex flex-wrap gap-3">
+      <h4 className="text-sm font-medium text-gray-700 mb-2">{title}</h4>
+      <div className="flex flex-wrap gap-2">
         {options.map((option) => (
           <button
-            key={option}
-            type="button"
-            onClick={() => onSelect(option)}
-            className={`px-5 py-2 rounded-full font-medium border ${
-              selected === option
-                ? 'border-red-600 bg-red-100'
-                : 'border-gray-300 hover:border-red-500'
-            }`}
+            key={option.name}
+            onClick={() => onSelect(option.name)}
+            className={`flex items-center px-4 py-2 border rounded-full text-sm transition 
+              ${selected === option.name
+                ? 'border-black font-semibold'
+                : 'border-gray-300 hover:border-gray-400'}
+            `}
           >
-            {option}
+            {
+              option.code&& <span
+              className="w-3 h-3 rounded-full border border-gray-400 mr-2"
+              style={{ backgroundColor: option.code }}
+            ></span>
+            }
+           
+            {option.name}
           </button>
         ))}
       </div>
     </div>
   );
-}
+};
+
 
 
 const bodyTypeOptions = [
@@ -168,7 +221,7 @@ const bodyTypeOptions = [
     e.preventDefault();
     // Handle form submission here
     console.log('Form submitted:', formData);
-    alert('Ad posted successfully!');
+    // alert('Ad posted successfully!');
   };
 
   // Step 1: Category Selection
@@ -429,43 +482,115 @@ that such information is complete and accurate. <span className=' text-blue-500'
 
     
 
+      {/* File Upload List */}
+<div className="space-y-4 mb-6">
+  {uploadedFiles.map((file) => (
+    <div
+      key={file.id}
+      className="flex items-center justify-between p-4 border border-red-300 rounded-xl bg-white shadow-sm"
+    >
+      {/* File info */}
+      <div className="flex items-center gap-3 w-full overflow-hidden">
+        {/* File icon */}
+        <div className="flex-shrink-0">
+          <svg
+            width="36"
+            height="36"
+            viewBox="0 0 36 36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect x="2" y="2" width="32" height="32" rx="16" fill="#FFCCCC" />
+            <rect
+              x="2"
+              y="2"
+              width="32"
+              height="32"
+              rx="16"
+              stroke="#FFDADA"
+              strokeWidth="4"
+            />
+            <path
+              d="M13.3333 24H22.6667C23.403 24 24 23.403 24 22.6667V13.3333C24 12.597 23.403 12 22.6667 12H13.3333C12.597 12 12 12.597 12 13.3333V22.6667C12 23.403 12.597 24 13.3333 24ZM13.3333 24L20.6667 16.6667L24 20M16.6667 15.6667C16.6667 16.219 16.219 16.6667 15.6667 16.6667C15.1144 16.6667 14.6667 16.219 14.6667 15.6667C14.6667 15.1144 15.1144 14.6667 15.6667 14.6667C16.219 14.6667 16.6667 15.1144 16.6667 15.6667Z"
+              stroke="#FF0000"
+              strokeWidth="1.3"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        </div>
 
-{/* File Upload List */}
-      <div className="space-y-4 mb-6">
-        {uploadedFiles.map((file) => (
-          <div key={file.id} className="flex items-center justify-between p-3 border border-gray-300 rounded-md">
-            <div className="flex items-center space-x-4">
-              <div className="text-red-500 font-semibold"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="2" y="2" width="32" height="32" rx="16" fill="#FFCCCC"/>
-<rect x="2" y="2" width="32" height="32" rx="16" stroke="#FFDADA" stroke-width="4"/>
-<path d="M13.3333 24H22.6667C23.403 24 24 23.403 24 22.6667V13.3333C24 12.597 23.403 12 22.6667 12H13.3333C12.597 12 12 12.597 12 13.3333V22.6667C12 23.403 12.597 24 13.3333 24ZM13.3333 24L20.6667 16.6667L24 20M16.6667 15.6667C16.6667 16.219 16.219 16.6667 15.6667 16.6667C15.1144 16.6667 14.6667 16.219 14.6667 15.6667C14.6667 15.1144 15.1144 14.6667 15.6667 14.6667C16.219 14.6667 16.6667 15.1144 16.6667 15.6667Z" stroke="#FF0000" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+        {/* File details */}
+        <div className="flex flex-col w-full overflow-hidden">
+         <div className=' flex justify-between '>
+           <p className="font-semibold text-sm truncate">{file.name}</p>
+
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M10.5 13.0001H12.1667M12.1667 13.0001H25.5M12.1667 13.0001V24.6667C12.1667 25.1088 12.3423 25.5327 12.6548 25.8453C12.9674 26.1578 13.3913 26.3334 13.8333 26.3334H22.1667C22.6087 26.3334 23.0326 26.1578 23.3452 25.8453C23.6577 25.5327 23.8333 25.1088 23.8333 24.6667V13.0001H12.1667ZM14.6667 13.0001V11.3334C14.6667 10.8914 14.8423 10.4675 15.1548 10.1549C15.4674 9.84234 15.8913 9.66675 16.3333 9.66675H19.6667C20.1087 9.66675 20.5326 9.84234 20.8452 10.1549C21.1577 10.4675 21.3333 10.8914 21.3333 11.3334V13.0001M16.3333 17.1667V22.1667M19.6667 17.1667V22.1667" stroke="#667085" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-</div>
-              <div>
-                <p className="font-semibold text-sm">{file.name}</p>
-                <p className="text-xs text-gray-500">{file.size}</p>
-                {file.progress > 0 && file.progress < 100 && (
-                  <div  className=' w-full bg-red-100'>
-                  <div className="w-40 h-2 bg-red-500 rounded-full mt-1" style={{ width: `${file.progress}%` }}></div>
 
-                  </div>
-                )}
-                {file.progress === 100 && (
-                  <div className="w-40 h-1 bg-red-700 rounded-full mt-1"></div>
-                )}
-              </div>
+         </div>
+          
+          <p className="text-xs text-gray-500">{file.size}</p>
+
+          {/* Progress Bar */}
+          {file.progress > 0 && file.progress < 100 && (
+            <div className="w-full h-2 bg-red-100 rounded-full mt-2 overflow-hidden">
+              <div
+                className="h-2 bg-red-500 rounded-full transition-all"
+                style={{ width: `${file.progress}%` }}
+              />
             </div>
-            <button className="">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" fill="#FF0000"/>
-<rect x="0.5" y="0.5" width="15" height="15" rx="7.5" stroke="#FF0000"/>
-<path d="M11.3327 5.5L6.74935 10.0833L4.66602 8" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+          )}
 
-            </button>
-          </div>
-        ))}
+          {/* Completed */}
+          {file.progress === 100 && (
+            <div className="w-full h-2 bg-green-500 rounded-full mt-2" />
+          )}
+
+          {/* Error message */}
+          {file.error && (
+            <p className="text-xs text-red-500 mt-1">
+              Upload failed, please try again.
+            </p>
+          )}
+        </div>
       </div>
+
+      {/* Status icon */}
+      <div className="flex-shrink-0 ml-3">
+        {file.progress === 100 && !file.error ? (
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.5"
+              y="0.5"
+              width="15"
+              height="15"
+              rx="7.5"
+              fill="#00C851"
+            />
+            <path
+              d="M11.3327 5.5L6.74935 10.0833L4.66602 8"
+              stroke="white"
+              strokeWidth="1.6"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </svg>
+        ) : file.error ? (
+          <button className="text-xs text-red-500 hover:underline">Retry</button>
+        ) : null}
+      </div>
+    </div>
+  ))}
+</div>
+
 
       {/* Image Previews */}
       <div className="flex space-x-4 mb-6">
@@ -582,21 +707,19 @@ that such information is complete and accurate. <span className=' text-blue-500'
       
 
 
-        {/* Vehicle Color */}
       <SectionSelector
-        title="Vehicle Color"
-        options={colors}
-        selected={formData.vehicleColor}
-        onSelect={(val) => handleChange('vehicleColor', val)}
-      />
+  title="Vehicle Color"
+  options={vehicleColors}
+  selected={formData.vehicleColor}
+  onSelect={(val) => handleChange('vehicleColor', val)}
+/>
 
-      {/* Interior Color */}
-      <SectionSelector
-        title="Interior Color"
-        options={colors}
-        selected={formData.interiorColor}
-        onSelect={(val) => handleChange('interiorColor', val)}
-      />
+<SectionSelector
+  title="Interior Color"
+  options={interiorColors}
+  selected={formData.interiorColor}
+  onSelect={(val) => handleChange('interiorColor', val)}
+/>
 
       {/* Fuel Type */}
       <SectionSelector
@@ -664,8 +787,44 @@ that such information is complete and accurate. <span className=' text-blue-500'
       </div>
 
       <div>
-        <img src='./public/map.png' alt='' />
+        <img src={map} alt='' />
       </div>
+
+                            <label htmlFor="model" className="block  font-semibold text-gray-700 mb-1">Choose how you want to label your location</label>
+
+       <div  className=' w-full'>
+                            <label htmlFor="model" className="block text-sm font-medium text-gray-700 mb-1">Add Custom Label</label>
+
+              <Select value={selectedFilter} onValueChange={handleFilterChange}>
+              <SelectTrigger  className="w-full h-12">
+                <SelectValue placeholder="Add a name for your location" />
+              </SelectTrigger>
+              <SelectContent>
+                {filterOptions.map(option => (
+                  <SelectItem key={option.value} value={option.value}>
+                    {option.label}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+            </div>
+
+
+            <div className=' bg-[#F2F4F7]  text-[#98A2B3] my-6 p-4 rounded-md'>
+     <p className=' text-sm'>Make sure the car information you have entered is correct. You will only be able to make 
+select changes once the ad is live. </p>
+
+    </div>
+
+    <div className='  bg-[#F2F4F7]  text-[#98A2B3] my-6 p-4 rounded-md'>
+     <p className=' text-sm'>Your ad will be rejected if it does not comply with our <span className=' text-blue-500'> posting guidelines. </span> 
+Got questions? <span className=' text-blue-600'> email us. </span> </p>
+
+ <p className=' pt-2 text-sm'>By proceeding, I confirm that I have reviewed the information provided above and confirm 
+that such information is complete and accurate. <span className=' text-blue-500'>Terms & conditions.</span>  </p>
+    </div>
+
+    
      
 
       {/* Action Buttons */}

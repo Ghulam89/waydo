@@ -1,4 +1,5 @@
 import { MicIcon, SearchIcon, XIcon, MenuIcon } from "lucide-react";
+import logo from '../../../../assets/images/Logo.png';
 import { Button } from "../../../../components/ui/button";
 import Announcement from "../../../../components/navbar/Announcement";
 import { useState } from "react";
@@ -116,7 +117,7 @@ export const NavbarSubsection = (): JSX.Element => {
               <img
                 className="w-[100px] md:w-[142px] h-11"
                 alt="Logo wrap"
-                src={'src/assets/images/logo.png'}
+                src={logo}
               />
               <Button
                 variant="ghost"

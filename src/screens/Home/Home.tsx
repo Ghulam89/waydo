@@ -16,6 +16,7 @@ import Banner from "../../components/Banner";
 import car1 from '../../assets/images/cars/car1.png';
 import fire from '../../assets/images/icons/fire.png';
 import boost from '../../assets/images/icons/boost.png';
+import { Link } from "react-router-dom";
 
 const carListings = [
   {
@@ -179,7 +180,7 @@ export const Home = (): JSX.Element => {
                           : "shadow-shadow-sm"
                       }`}
                     >
-                      <div className="flex flex-col h-[167px] items-start gap-2.5  relative self-stretch w-full rounded-[16px_16px_0px_0px] bg-cover bg-[50%_50%]">
+                      <Link to={'/car-detail'} className="flex flex-col h-[167px] items-start gap-2.5  relative self-stretch w-full rounded-[16px_16px_0px_0px] bg-cover bg-[50%_50%]">
                         <img
                           src={car1}
                           className=" h-full w-full"
@@ -201,7 +202,7 @@ export const Home = (): JSX.Element => {
                         }
                         
                      
-                      </div>
+                      </Link>
 
                       <CardContent className="flex flex-col items-start gap-2.5 pt-[18px] pb-6 px-3 relative self-stretch w-full flex-[0_0_auto] bg-[#ffffff] rounded-[0px_0px_16px_16px]">
                         <div className="flex flex-col items-start gap-3.5 relative self-stretch w-full flex-[0_0_auto]">

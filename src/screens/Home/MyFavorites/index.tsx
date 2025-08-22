@@ -4,6 +4,9 @@ import { Button } from "../../../components/ui/button";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../../components/ui/select";
 import { Input } from "../../../components/ui/input";
 import CarCard from "../../../components/common/CarCard";
+import favourites from '../../../assets/images/icons/no-favourites.png';
+import conversation from '../../../assets/images/icons/no-conversation.png';
+import car from '../../../assets/images/cars/car1.png';
 
 const favoriteLists = [
   {
@@ -11,7 +14,7 @@ const favoriteLists = [
     title: "All Favorites",
     savedAds: 0,
     privacy: "Private",
-    imgSrc: "/cars/car1.png", // Removed './public' from path
+    imgSrc:car, // Removed './public' from path
   },
 ];
 
@@ -53,7 +56,7 @@ const MyFavorites = () => {
       price: "$42,500",
       year: "2022",
       location: "Manhattan, NY • 17 July 2025",
-      image: "/cars/car1.png",
+      image: car,
     },
       {
       id: 1,
@@ -62,7 +65,7 @@ const MyFavorites = () => {
       price: "$42,500",
       year: "2022",
       location: "Manhattan, NY • 17 July 2025",
-      image: "/cars/car1.png",
+      image: car,
     },
     
       {
@@ -72,7 +75,7 @@ const MyFavorites = () => {
       price: "$42,500",
       year: "2022",
       location: "Manhattan, NY • 17 July 2025",
-      image: "/cars/car1.png",
+      image:car,
     },
     
     
@@ -155,7 +158,7 @@ const MyFavorites = () => {
           <Card className="rounded-md p-6 flex flex-col items-center justify-center text-center cursor-pointer">
             <div className="">
               <img
-                src="/icons/no-conversation.png"
+                src={conversation}
                 alt="Create your personalized list"
                 className="object-contain w-full h-full"
               />
@@ -206,7 +209,7 @@ const MyFavorites = () => {
             <div className="rounded-md flex flex-col items-center justify-center p-16 text-center text-gray-500">
               <div className="mb-6">
                 <img
-                  src="/icons/no-favourites.png"
+                  src={favourites}
                   alt="No favorites"
                   className="mx-auto mb-4"
                 />

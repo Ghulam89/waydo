@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from '../../components/ui/button';
 import { Input } from '../../components/ui/input';
-
+import profile from '../../assets/images/profile.png';
+import verified from '../../assets/images/icons/verified.png';
 export default function ProfileSettings() {
   return (
     <div className='  pb-8'>
@@ -15,7 +16,7 @@ export default function ProfileSettings() {
 
       <div className=' flex gap-2 items-center mb-10 shadow-md rounded-lg  px-3'>
         <div className=' relative w-56 h-56'>
-          <img src='./public/profile.png' className='' alt='' />
+          <img src={profile} className='' alt='' />
           <div className=' absolute  bottom-20 right-5'>
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="1" y="1" width="24" height="24" rx="12" fill="white"/>
@@ -33,7 +34,7 @@ export default function ProfileSettings() {
             <div className=" bg-indigo-50 border border-indigo-50 rounded-2xl p-6 flex items-center gap-4 mb-8">
         <img
           className=" rounded-full object-cover"
-          src='./public/icons/verified.png'
+          src={verified}
           alt="avatar"
         />
         <div className="flex-1">

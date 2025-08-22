@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { IoClose } from 'react-icons/io5';
 import { Button } from '../ui/button';
-
+import verify from '../../assets/images/verified.png'
 const Announcement =  (): React.ReactElement | null => {
   const [isVisible, setIsVisible] = useState(true);
 
@@ -22,7 +22,7 @@ const Announcement =  (): React.ReactElement | null => {
        
         <p className='m-0 text-white  gap-2 flex text-xs md:text-[14px] text-center'>
          <img 
-          src={"./public/verified.png"}  
+          src={verify}  
           alt="Verified badge" 
           className="w-5 h-5" 
         />  Join us in building a safer community. Get verified to boost your credibility and assist us in creating trust amongst our users!

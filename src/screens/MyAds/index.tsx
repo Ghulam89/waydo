@@ -5,7 +5,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 import { VerifySubsection } from "../Home/sections/VerifySubsection/VerifySubsection";
 import { Button } from "../../components/ui/button";
 import ListingCard from "../../components/common/ListingCard";
-
+import ads from '../../assets/images/ads.png';
 const savedSearches = [
   {
     id: 1,
@@ -176,7 +176,7 @@ const MyAds = () => {
         ) : (
           <div className="flex flex-col items-center justify-center py-10">
             <img
-              src={"./public/icons/no-ads.png"}
+              src={ads}
               className="mx-auto mb-4"
               alt="No notifications"
             />

@@ -1,6 +1,8 @@
 
 import { Link } from "react-router-dom";
 import { DropdownModal } from "../ui/DropdownModal";
+import search from '../../assets/images/icons/save-search.png';
+import car from '../../assets/images/cars/car1.png';
 
 interface NotificationsModalProps {
   isOpen: boolean;
@@ -69,7 +71,7 @@ export const SaveSearchModal: React.FC<NotificationsModalProps> = ({
           {saveSearch.length === 0 ? (
             <div className="flex flex-col items-center justify-center">
               <img
-                src={"./public/icons/save-search.png"}
+                src={search}
                 className=" my-10"
                 alt="No notifications"
               />
@@ -90,7 +92,7 @@ export const SaveSearchModal: React.FC<NotificationsModalProps> = ({
                   <div className=" flex gap-2">
                     <div className="rounded-md w-12 h-12">
                       <img
-                        src="./public/cars/car1.png"
+                        src={car}
                         className="object-cover rounded-lg w-full h-full"
                         alt="notification icon"
                       />
