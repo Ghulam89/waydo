@@ -109,7 +109,7 @@ export const FooterSubsection = (): JSX.Element => {
                 <img
                   className=" h-10"
                   alt="Logo wrap"
-                  src="public/logo.png"
+                  src="./public/logo.png"
                 />
               </div>
 

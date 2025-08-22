@@ -40,7 +40,7 @@ const DropdownUser = () => {
         onClick={() => setDropdownOpen(!dropdownOpen)}
         className="flex items-center gap-2"
       >
-        <img src="public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
+        <img src="./public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
         <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4.5 6.75L9 11.25L13.5 6.75" stroke="#667085" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
         </svg>
@@ -67,7 +67,7 @@ const DropdownUser = () => {
 
         {/* Top User Info */}
         <div className="px-4 py-4 border-b border-gray-200 flex items-center gap-3">
-          <img src="public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
+          <img src="./public/profile.png" className="w-10 h-10 rounded-full" alt="User" />
           <div>
             <p className="text-sm font-semibold text-gray-800">Olivia Rhye</p>
             <p className="text-xs text-gray-500">olivia@waydo.com</p>
@@ -77,9 +77,9 @@ const DropdownUser = () => {
         {/* Menu Links */}
         <ul className="px-4 py-3 text-sm text-gray-700">
           <li onClick={()=>setDropdownOpen(false)}><Link to="/my-profile" className="block py-2 hover:text-blue-600">View profile</Link></li>
-          <li><Link to="#" className="block py-2 hover:text-blue-600">Public Profile</Link></li>
+          <li><Link to="#" className="block py-2 hover:text-blue-600">./public Profile</Link></li>
           <li className="flex items-center gap-2 py-2 font-medium">
-            <img src='public/verified.png' alt='' />
+            <img src='./public/verified.png' alt='' />
             <Link to="#">Get Verified</Link>
           </li>
           <li><Link to="#" className="block py-2 hover:text-blue-600">My Listings</Link></li>

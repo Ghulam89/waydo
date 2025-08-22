@@ -39,7 +39,7 @@ const Signin: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         {/* Logo */}
         <div className="">
           <img
-            src={"public/logo.png"}
+            src={"./public/logo.png"}
             alt="Waydo Logo"
             className="h-10 mx-auto"
           />
@@ -48,7 +48,7 @@ const Signin: React.FC<LoginModalProps> = ({ isOpen, onClose }) => {
         {/* Illustration */}
         <div className="">
           <img
-            src="public/By my car-cuate.png"
+            src="./public/By my car-cuate.png"
             alt="Car Illustration"
             className="h-32 mx-auto"
           />

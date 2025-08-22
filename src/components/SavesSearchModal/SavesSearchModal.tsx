@@ -69,7 +69,7 @@ export const SaveSearchModal: React.FC<NotificationsModalProps> = ({
           {saveSearch.length === 0 ? (
             <div className="flex flex-col items-center justify-center">
               <img
-                src={"public/icons/save-search.png"}
+                src={"./public/icons/save-search.png"}
                 className=" my-10"
                 alt="No notifications"
               />
@@ -90,7 +90,7 @@ export const SaveSearchModal: React.FC<NotificationsModalProps> = ({
                   <div className=" flex gap-2">
                     <div className="rounded-md w-12 h-12">
                       <img
-                        src="public/cars/car1.png"
+                        src="./public/cars/car1.png"
                         className="object-cover rounded-lg w-full h-full"
                         alt="notification icon"
                       />

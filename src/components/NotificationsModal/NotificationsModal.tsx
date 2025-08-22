@@ -67,7 +67,7 @@ export const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({
           {notifications.length === 0 ? (
             <div className="flex flex-col items-center justify-center ">
               <img
-                src="public/icons/notification.png"
+                src="./public/icons/notification.png"
                 className=""
                 alt="No notifications"
               />
@@ -87,7 +87,7 @@ export const NotificationsDropdown: React.FC<NotificationsDropdownProps> = ({
                 >
                   <div className="rounded-md w-10 h-10 flex-shrink-0">
                     <img
-                      src="public/cars/car1.png"
+                      src="./public/cars/car1.png"
                       className="object-cover rounded-lg w-full h-full"
                       alt="notification icon"
                     />

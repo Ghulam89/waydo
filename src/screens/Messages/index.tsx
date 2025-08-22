@@ -95,7 +95,7 @@ const Messages = () => {
               >
                 <div className=" flex gap-1 items-center">
                   <div className=" w-14 h-14 ">
-                    <img src="public/profile.png" alt="" />
+                    <img src="./public/profile.png" alt="" />
                   </div>
                   <div>
                     <div className="font-semibold">{chat.user}</div>
@@ -115,7 +115,7 @@ const Messages = () => {
             <div className="p-4 border-b  flex justify-between  bg-primary  items-center">
               <div className="   gap-2 flex">
                 <div className=" w-12 h-12">
-                  <img src="public/profile.png" alt="" />
+                  <img src="./public/profile.png" alt="" />
                 </div>
                 <div>
                   <h2 className="font-bold text-white">Tasha Bleu</h2>

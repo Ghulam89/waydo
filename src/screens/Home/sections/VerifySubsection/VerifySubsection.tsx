@@ -13,7 +13,7 @@ export const VerifySubsection = (): JSX.Element => {
                 <img
                   className=""
                   alt="Vector"
-                  src={'public/icons/verified.png'}
+                  src={'./public/icons/verified.png'}
                 />
               </div>
 

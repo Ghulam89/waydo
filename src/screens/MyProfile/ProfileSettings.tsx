@@ -10,12 +10,12 @@ export default function ProfileSettings() {
           <h1 className="text-2xl font-semibold">My Profile</h1>
           <p className="text-gray-500 text-sm">Update your profile details here</p>
         </div>
-        <Button className="border bg-transparent  hover:bg-gray-5 text-primary/90 px-4 py-2 rounded text-sm font-medium">Public Profile</Button>
+        <Button className="border bg-transparent  hover:bg-gray-5 text-primary/90 px-4 py-2 rounded text-sm font-medium">./public Profile</Button>
       </div>
 
       <div className=' flex gap-2 items-center mb-10 shadow-md rounded-lg  px-3'>
         <div className=' relative w-56 h-56'>
-          <img src='public/profile.png' className='' alt='' />
+          <img src='./public/profile.png' className='' alt='' />
           <div className=' absolute  bottom-20 right-5'>
             <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="1" y="1" width="24" height="24" rx="12" fill="white"/>
@@ -33,7 +33,7 @@ export default function ProfileSettings() {
             <div className=" bg-indigo-50 border border-indigo-50 rounded-2xl p-6 flex items-center gap-4 mb-8">
         <img
           className=" rounded-full object-cover"
-          src='public/icons/verified.png'
+          src='./public/icons/verified.png'
           alt="avatar"
         />
         <div className="flex-1">

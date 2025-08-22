@@ -178,21 +178,21 @@ export const Home = (): JSX.Element => {
                     >
                       <div className="flex flex-col h-[167px] items-start gap-2.5  relative self-stretch w-full rounded-[16px_16px_0px_0px] bg-cover bg-[50%_50%]">
                         <img
-                          src="public/cars/car1.png"
+                          src="./public/cars/car1.png"
                           className=" h-full w-full"
                           alt=""
                         />
                         {
                           car.hasFireIcon && (
                           <div className="absolute top-2 -right-4">
-                            <img src="public/icons/fire.png" alt="" />
+                            <img src="./public/icons/fire.png" alt="" />
                           </div>
                           )
                         }
                          {
                           car.hasBoostIcon && (
                            <div className="absolute top-2 -right-3">
-                        <img src='public/icons/boost.png' alt="" />
+                        <img src='./public/icons/boost.png' alt="" />
                       </div>
                           )
                         }

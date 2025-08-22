@@ -11,7 +11,7 @@ const favoriteLists = [
     title: "All Favorites",
     savedAds: 0,
     privacy: "Private",
-    imgSrc: "/cars/car1.png", // Removed 'public' from path
+    imgSrc: "/cars/car1.png", // Removed './public' from path
   },
 ];
 

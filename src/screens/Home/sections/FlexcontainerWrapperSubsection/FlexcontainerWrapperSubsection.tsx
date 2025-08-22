@@ -35,7 +35,7 @@ export const FlexcontainerWrapperSubsection = (): JSX.Element => {
         ))}
       </div>
     </section> */}
-    <img src="public/ads.png" />
+    <img src="./public/ads.png" />
     </>
   
   );

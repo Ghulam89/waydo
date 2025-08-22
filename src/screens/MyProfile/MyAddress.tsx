@@ -32,7 +32,7 @@ export default function MyAddress() {
 
           {/* Illustration */}
           <img
-            src="public/icons/no-address.png"
+            src="./public/icons/no-address.png"
             alt="No Address"
             className=" mb-5"
           />

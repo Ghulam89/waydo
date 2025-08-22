@@ -93,15 +93,15 @@ const vehicleConditionOptions = ['New', 'Used'];
 
 
 const bodyTypeOptions = [
-  { id: 'compact', label: 'Compact',img:'public/ads/body-type1.png'},
-  { id: 'sedan', label: 'Sedan',img:'public/ads/body-type2.png'},
-  { id: 'jeep', label: 'Jeep',img:'public/ads/body-type3.png'},
-  { id: 'pickup', label: 'Pickup Truck',img:'public/ads/body-type4.png' },
-  { id: 'coupe', label: 'Coupe',img:'public/ads/body-type5.png'},
-  { id: 'convertible', label: 'Convertible',img:'public/ads/body-type6.png'},
-  { id: 'minivan', label: 'Minivan',img:'public/ads/body-type7.png'},
-  { id: 'van', label: 'Van',img:'public/ads/body-type8.png'},
-  { id: 'other', label: 'Other',img:'public/ads/body-type7.png'},
+  { id: 'compact', label: 'Compact',img:'./public/ads/body-type1.png'},
+  { id: 'sedan', label: 'Sedan',img:'./public/ads/body-type2.png'},
+  { id: 'jeep', label: 'Jeep',img:'./public/ads/body-type3.png'},
+  { id: 'pickup', label: 'Pickup Truck',img:'./public/ads/body-type4.png' },
+  { id: 'coupe', label: 'Coupe',img:'./public/ads/body-type5.png'},
+  { id: 'convertible', label: 'Convertible',img:'./public/ads/body-type6.png'},
+  { id: 'minivan', label: 'Minivan',img:'./public/ads/body-type7.png'},
+  { id: 'van', label: 'Van',img:'./public/ads/body-type8.png'},
+  { id: 'other', label: 'Other',img:'./public/ads/body-type7.png'},
 ];
 
   const [uploadedFiles, setUploadedFiles] = useState([
@@ -119,9 +119,9 @@ const bodyTypeOptions = [
 
   // Dummy images for previews
   const images = [
-    'public/cars/car1.png',
-    'public/cars/car1.png',
-    'public/cars/car1.png',
+    './public/cars/car1.png',
+    './public/cars/car1.png',
+    './public/cars/car1.png',
   ];
 
 
@@ -664,7 +664,7 @@ that such information is complete and accurate. <span className=' text-blue-500'
       </div>
 
       <div>
-        <img src='public/map.png' alt='' />
+        <img src='./public/map.png' alt='' />
       </div>
      
 
