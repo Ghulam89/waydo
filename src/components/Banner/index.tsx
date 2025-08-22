@@ -25,7 +25,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                         <div className="relative h-full w-full">
                             <img 
-                                src={'/public/banner1.png'} 
+                                src={'public/banner1.png'} 
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />
@@ -37,7 +37,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                         <div className="relative h-full w-full">
                             <img 
-                                  src={'/public/banner2.png'}  
+                                  src={'public/banner2.png'}  
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />
@@ -49,7 +49,7 @@ export default function Banner({ withFilter, onSearch, filterSticky }: BannerPro
                     <SwiperSlide>
                        <div className="relative h-full w-full">
                             <img 
-                                  src={'/public/banner1.png'}  
+                                  src={'public/banner1.png'}  
                                 alt="banner" 
                                 className="h-full w-full object-cover"
                             />

@@ -7,7 +7,7 @@ const CarCard = () => {
       {/* Left: Car Image */}
       <div className="relative w-full md:w-1/3">
         <img
-          src="/public/cars/car1.png"
+          src="public/cars/car1.png"
           alt="Car"
           className="rounded-xl object-cover w-full  h-full"
         />

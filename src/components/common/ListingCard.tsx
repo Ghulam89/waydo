@@ -204,8 +204,8 @@ export default function ListingCard() {
             <Button  className=" bg-[#FDB022] hover:bg-[#FDB022]">
               <span className=" text-[#7A2E0E] ">Boosted</span>
             </Button>
-            <img src="/public/icons/fire.png" alt="" />
-            <img src="/public/icons/boost.png" alt="" />
+            <img src="public/icons/fire.png" alt="" />
+            <img src="public/icons/boost.png" alt="" />
             <span className="inline-flex items-center gap-1">
              <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M20 21.5H9C5.70017 21.5 4.05025 21.5 3.02513 20.4749C2 19.4497 2 17.7998 2 14.5V3.5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"/>

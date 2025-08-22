@@ -4,7 +4,7 @@ import { Button } from "../../../../components/ui/button";
 export const FrameSubsection = (): JSX.Element => {
   return (
     <section style={{ 
-    backgroundImage: `url('/public/banner.png')`,
+    backgroundImage: `url('public/banner.png')`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat'

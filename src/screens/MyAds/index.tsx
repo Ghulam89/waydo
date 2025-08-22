@@ -176,7 +176,7 @@ const MyAds = () => {
         ) : (
           <div className="flex flex-col items-center justify-center py-10">
             <img
-              src={"/public/icons/no-ads.png"}
+              src={"public/icons/no-ads.png"}
               className="mx-auto mb-4"
               alt="No notifications"
             />

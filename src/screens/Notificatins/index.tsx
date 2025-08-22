@@ -33,7 +33,7 @@ const Notifications = () => {
         {notifications.length === 0 ? (
           <div className="flex flex-col items-center justify-center py-10">
             <img
-              src={"/public/icons/notification.png"}
+              src={"public/icons/notification.png"}
               className=" mx-auto mb-4"
               alt="No notifications"
             />
@@ -54,7 +54,7 @@ const Notifications = () => {
                 <div className="flex items-center gap-4">
                   <div className="w-[61px] h-[61px] rounded-md">
                     <img
-                      src="/public/cars/car1.png"
+                      src="public/cars/car1.png"
                       className="object-cover rounded-lg w-full h-full"
                       alt="notification icon"
                     />

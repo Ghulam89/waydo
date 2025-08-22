@@ -115,7 +115,7 @@ export const NavbarSubsection = (): JSX.Element => {
               <img
                 className="w-[100px] md:w-[142px] h-11"
                 alt="Logo wrap"
-                src="/public/logo.png"
+                src="public/logo.png"
               />
               <Button
                 variant="ghost"

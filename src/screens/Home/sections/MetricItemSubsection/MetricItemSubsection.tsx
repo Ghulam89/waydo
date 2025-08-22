@@ -9,25 +9,25 @@ export const MetricItemSubsection = (): JSX.Element => {
     {
       id: 1,
       label: "Compact",
-      image: "/public/quick/car1.png",
+      image: "public/quick/car1.png",
       className: "w-[70px] h-[30px] top-[15px] left-0",
     },
     {
       id: 2,
       label: "Sedan",
-      image: "/public/quick/car2.png",
+      image: "public/quick/car2.png",
       className: "w-[69px] h-[41px] top-[11px] left-px",
     },
     {
       id: 3,
       label: "SUV",
-      image: "/public/quick/car3.png",
+      image: "public/quick/car3.png",
       className: "w-[70px] h-[25px] top-[18px] left-0 object-cover",
     },
     {
       id: 4,
       label: "Pickup Truck",
-      image: "/public/quick/car4.png",
+      image: "public/quick/car4.png",
       className: "w-[70px] h-[27px] top-4 left-0",
     },
   ];
@@ -36,25 +36,25 @@ export const MetricItemSubsection = (): JSX.Element => {
     {
       id: 5,
       label: "Coupe",
-      image: "/public/quick/car5.png",
+      image: "public/quick/car5.png",
       className: "w-[70px] h-[30px] top-[15px] left-0 object-cover",
     },
     {
       id: 6,
       label: "Convertible",
-        image: "/public/quick/car6.png",
+        image: "public/quick/car6.png",
       className: "w-[76px] h-[39px] top-0 left-0",
     },
     {
       id: 7,
       label: "Minivan",
-         image: "/public/quick/car7.png",
+         image: "public/quick/car7.png",
       className: "w-[70px] h-[37px] top-3.5 left-0 object-cover",
     },
     {
       id: 8,
       label: "Minivan",
-      image: "/public/quick/car8.png",
+      image: "public/quick/car8.png",
       className: "w-[74px] h-[51px] top-[5px] left-0",
     },
   ];
@@ -63,31 +63,31 @@ export const MetricItemSubsection = (): JSX.Element => {
     {
       id: 1,
       label: "Petrol",
-      image: "/public/quick/service1.png",
+      image: "public/quick/service1.png",
       className: "w-[33px] h-8",
     },
     {
       id: 2,
       label: "Petrol",
-      image: "/public/quick/service2.png",
+      image: "public/quick/service2.png",
       className: "w-[18.1px] h-8",
     },
     {
       id: 3,
       label: "Petrol",
-      image: "/public/quick/service3.png",
+      image: "public/quick/service3.png",
       className: "w-[29px] h-8",
     },
     {
       id: 4,
       label: "Electric",
-      image: "/public/quick/service4.png",
+      image: "public/quick/service4.png",
       className: "w-4 h-8",
     },
     {
       id: 5,
       label: "Electric",
-      image: "/public/quick/service5.png",
+      image: "public/quick/service5.png",
       className: "w-8 h-8",
     },
   ];
