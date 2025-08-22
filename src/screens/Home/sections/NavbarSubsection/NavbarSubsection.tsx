@@ -8,7 +8,8 @@ import { SaveSearchModal } from "../../../../components/SavesSearchModal/SavesSe
 import DropdownUser from "../DropdownUser";
 import { NotificationsDropdown } from "../../../../components/NotificationsModal/NotificationsModal";
 import { Link } from "react-router-dom";
-import logo from '../../../../assets/images/logo.png'
+import logo from '../../../../assets/images/logo.png';
+
 const navigationItems = [
   {
     icon: (
