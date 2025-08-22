@@ -13,9 +13,6 @@ import { NavbarSubsection } from "./sections/NavbarSubsection/NavbarSubsection";
 import { PaginationSubsection } from "./sections/PaginationSubsection/PaginationSubsection";
 import { VerifySubsection } from "./sections/VerifySubsection/VerifySubsection";
 import Banner from "../../components/Banner";
-import car1 from '../../assets/images/cars/car1.png';
-import fire from '../../assets/images/icons/fire.png';
-import boost from '../../assets/images/icons/boost.png';
 
 const carListings = [
   {
@@ -181,21 +178,21 @@ export const Home = (): JSX.Element => {
                     >
                       <div className="flex flex-col h-[167px] items-start gap-2.5  relative self-stretch w-full rounded-[16px_16px_0px_0px] bg-cover bg-[50%_50%]">
                         <img
-                          src={car1}
+                          src="./public/cars/car1.png"
                           className=" h-full w-full"
                           alt=""
                         />
                         {
                           car.hasFireIcon && (
                           <div className="absolute top-2 -right-4">
-                            <img src={fire} alt="" />
+                            <img src="./public/icons/fire.png" alt="" />
                           </div>
                           )
                         }
                          {
                           car.hasBoostIcon && (
                            <div className="absolute top-2 -right-3">
-                        <img src={boost} alt="" />
+                        <img src='./public/icons/boost.png' alt="" />
                       </div>
                           )
                         }
