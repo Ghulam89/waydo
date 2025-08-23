@@ -12,6 +12,7 @@ import { Button } from "../../components/ui/button";
  import profile from "../../assets/images/profile.png";
  import verified from '../../assets/images/icons/verified.png';
  import logo from '../../assets/images/Logo.png';
+ import { Settings } from "lucide-react";
 const Messages = () => {
   const [selectedFilter, setSelectedFilter] = useState("");
   const [selectedChat, setSelectedChat] = useState(1);
@@ -26,31 +27,52 @@ const Messages = () => {
   ];
 
   const conversations = [
-    {
-      id: 1,
-      user: "Chelsea Hagon",
-      lastMessage: "I'd definitely shoot any opportunities I ....",
-      time: "3:14 PM",
-      online: true,
-      avatar: "/profile.png",
-    },
-    {
-      id: 2,
-      user: "Jerome White",
-      lastMessage: "Please review the latest update.",
-      time: "3:10 PM",
-      online: false,
-      avatar: "/profile.png",
-    },
-    {
-      id: 3,
-      user: "Madagascar",
-      lastMessage: "Meeting rescheduled to tomorrow.",
-      time: "2:45 PM",
-      online: true,
-      avatar: "/profile.png",
-    },
-  ];
+  {
+    id: 1,
+    user: "X-AE-A-13b",
+    avatar: "https://i.pravatar.cc/100?img=1",
+    lastMessage: "Enter your message de...",
+    time: "12:25",
+    online: true,
+    unread: 0,
+  },
+  {
+    id: 2,
+    user: "Jerome White",
+    avatar: "https://i.pravatar.cc/100?img=2",
+    lastMessage: "Enter your message de...",
+    time: "12:25",
+    online: true,
+    unread: 0,
+  },
+  {
+    id: 3,
+    user: "Madagasc",
+    avatar: "https://i.pravatar.cc/100?img=3",
+    lastMessage: "Enter your message...",
+    time: "12:25",
+    online: false,
+    unread: 999,
+  },
+  {
+    id: 4,
+    user: "Pippins McGray",
+    avatar: "https://i.pravatar.cc/100?img=4",
+    lastMessage: "Enter your message...",
+    time: "12:25",
+    online: true,
+    unread: 0,
+  },
+  {
+    id: 5,
+    user: "McKinsey V",
+    avatar: "https://i.pravatar.cc/100?img=5",
+    lastMessage: "Enter your message...",
+    time: "12:25",
+    online: false,
+    unread: 8,
+  },
+];
 
   const messages = [
     { from: "me", text: "Hey Tasha, what's good today?", time: "3:15 PM" },
@@ -68,6 +90,10 @@ const Messages = () => {
     setSelectedFilter(value);
   };
 
+
+    const [activeTab, setActiveTab] = useState("Internal");
+
+
   return (
     <div className="w-full py-10">
       <div className="max-w-7xl mx-auto px-3 bg-white rounded-lg overflow-hidden">
@@ -76,7 +102,7 @@ const Messages = () => {
           {/* Sidebar */}
           <aside className="border-r pr-4 w-3/12 flex flex-col h-full">
       {/* Header: Logo and Messenger Button */}
-      <div className="flex justify-between items-center px-4 py-3">
+      <div className="flex justify-between border-b  items-center px-4 py-3">
         <img src={logo} alt="Logo" className="w-32 object-contain" />
 
         <Button className="bg-transparent text-primary border-2 border-primary rounded-xl text-sm flex items-center gap-1.5 px-3 py-1.5">
@@ -117,6 +143,40 @@ const Messages = () => {
         </Button>
       </div>
 
+
+       <div className="flex items-center justify-between  p-3 w-full max-w-md">
+      {/* Left section */}
+      <div className="flex items-center gap-3">
+        {/* Profile Image */}
+        <div className="relative">
+          <img
+            src={profile}
+            alt="Profile"
+            className="w-12 h-12 rounded-full object-cover"
+          />
+          {/* Online Indicator */}
+          <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 border-2 border-white rounded-full"></span>
+        </div>
+
+        {/* Name & Branch */}
+        <div>
+          <h2 className="text-sm font-semibold text-gray-800">
+            Mainstream Motors LLC
+          </h2>
+          <p className="text-xs text-gray-500">Santo Domingo Branch</p>
+          <div className="flex items-center gap-1 text-xs text-green-600 mt-1">
+            <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+            <span>Online</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Settings Icon */}
+      <button className="p-2 text-gray-500 hover:text-gray-700">
+        <Settings className="w-5 h-5" />
+      </button>
+    </div>
+
       {/* Search Bar */}
       <div className="px-4 pb-3">
         <Input
@@ -125,27 +185,53 @@ const Messages = () => {
         />
       </div>
 
-      {/* Conversations List */}
+        <div className="flex flex-col h-screen border-r border-gray-200">
+     
+      <div className="flex border-b border-gray-200">
+        {["Current", "Archived", "Internal"].map((tab) => (
+          <div
+            key={tab}
+            onClick={() => setActiveTab(tab)}
+            className={`relative cursor-pointer px-4 py-3 text-sm font-medium ${
+              activeTab === tab
+                ? "text-black border-b-2 border-primary-600"
+                : "text-gray-500"
+            }`}
+          >
+            {tab}
+            {tab === "Internal" && (
+              <span className="absolute -top-1 -right-3 bg-primary-600 text-white text-xs font-semibold px-1.5 py-0.5 rounded-full">
+                12
+              </span>
+            )}
+          </div>
+        ))}
+      </div>
       <div className="overflow-y-auto flex-1">
         {conversations.map((chat) => (
           <div
             key={chat.id}
             onClick={() => setSelectedChat(chat.id)}
-            className={`cursor-pointer px-4 flex justify-between items-center py-3 hover:bg-gray-100 ${
-              selectedChat === chat.id ? "bg-[#F2F4F7] rounded-md" : ""
-            }`}
+            className={`cursor-pointer px-4 flex justify-between items-center py-3 
+              hover:bg-gray-100 ${
+                selectedChat === chat.id ? "bg-red-100 rounded-md" : ""
+              }`}
           >
+           
             <div className="flex gap-3 items-center">
-              <div className="relative w-14 h-14">
+             
+              <div className="relative w-12 h-12">
                 <img
                   src={chat.avatar}
                   alt={chat.user}
                   className="rounded-full object-cover w-full h-full"
                 />
                 {chat.online && (
-                  <span className="absolute bottom-0 right-0 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></span>
+                  <span className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white"></span>
                 )}
               </div>
+
+              {/* User info */}
               <div>
                 <div className="font-semibold text-gray-900">{chat.user}</div>
                 <div className="text-sm text-gray-600 truncate w-36">
@@ -153,10 +239,20 @@ const Messages = () => {
                 </div>
               </div>
             </div>
-            <div className="text-xs text-primary">{chat.time}</div>
+
+            {/* Right section: time + badge */}
+            <div className="flex flex-col items-end">
+              <span className="text-xs text-gray-500">{chat.time}</span>
+              {chat.unread > 0 && (
+                <span className="mt-1 text-xs font-semibold bg-primary-600 text-white px-2 py-0.5 rounded-full">
+                  {chat.unread > 99 ? "99+" : chat.unread}
+                </span>
+              )}
+            </div>
           </div>
         ))}
       </div>
+    </div>
     </aside>
 
           {/* Chat Window */}
@@ -217,7 +313,7 @@ const Messages = () => {
               {/* Image message */}
               <div className="flex justify-start">
                 <img
-                  src="/sample-image.jpg"
+                  src="./logo.png"
                   alt="Shared media"
                   className="rounded-md max-w-xs"
                 />
