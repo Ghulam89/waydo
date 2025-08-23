@@ -8,7 +8,7 @@ import Signin from "../../../auth/signin";
 import { SaveSearchModal } from "../../../../components/SavesSearchModal/SavesSearchModal";
 import DropdownUser from "../DropdownUser";
 import { NotificationsDropdown } from "../../../../components/NotificationsModal/NotificationsModal";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const navigationItems = [
   {
@@ -89,7 +89,7 @@ export const NavbarSubsection = (): JSX.Element => {
     const [activeModal, setActiveModal] = useState<string | null>(null);
   const [anchorEl, setAnchorEl] = useState<HTMLElement | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-
+  const navigate = useNavigate();
     const openModal = (modalName: string, event: React.MouseEvent<HTMLElement>) => {
    
     if (activeModal === modalName) {
@@ -137,6 +137,7 @@ export const NavbarSubsection = (): JSX.Element => {
                       <SearchIcon className="w-5 h-5 text-gray-500" />
                     </div>
                     <Input 
+                       onChange={()=>navigate('/search')}
                       className="shadow-shadow-xs h-12 w-full pl-10 pr-10" 
                       placeholder="Find your ideal vehicle." 
                     />

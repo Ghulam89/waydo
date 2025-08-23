@@ -3,7 +3,10 @@ import { FiHome, FiBriefcase, FiPlus } from "react-icons/fi";
 import { Button } from "../../components/ui/button";
 import { Card } from "../../components/ui/card";
 import address from '../../assets/images/icons/no-address.png';
+import AddAddress from "./AddAddress";
+import { useState } from "react";
 export default function MyAddress() {
+  const [open,setOpen] = useState(false)
   return (
     <div className="w-full py-10">
       <div className="max-w-4xl mx-auto px-4">
@@ -15,7 +18,7 @@ export default function MyAddress() {
               Manage your saved addresses
             </p>
           </div>
-          <Button className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white rounded-md">
+          <Button onClick={()=>setOpen(true)} className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white rounded-md">
             <FiPlus className="w-4 h-4" />
             Add A Location
           </Button>
@@ -60,6 +63,9 @@ export default function MyAddress() {
           </div>
         </div>
       </div>
+
+       <AddAddress setOpen={setOpen} open={open} onClose={()=>setOpen(false)} />
+         
     </div>
   );
 }

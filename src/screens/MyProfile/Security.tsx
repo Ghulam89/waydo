@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../components/ui/button";
 import { Input } from "../../components/ui/input";
 import { Card } from "../../components/ui/card";
+import DeleteAccount from "../../components/DeleteAccount";
 
 export default function MySecurity() {
+
+  const [isOpen,setIsOpen] = useState(false);
+
+const onClose = ()=>{
+  setIsOpen(false)
+}
   return (
     <div className="pb-10">
       {/* Header */}
@@ -34,6 +41,7 @@ export default function MySecurity() {
           {/* Deactivate Button */}
           <div>
             <Button
+              onClick={()=>setIsOpen(true)}
               variant="destructive"
 className="h-auto  bg-[#FFDADA] w-80 text-red-600 hover:bg-red-200 text-base font-medium [font-family:'Mona_Sans',Helvetica] shadow-shadow-xs ">
              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -102,6 +110,8 @@ className="h-auto  bg-[#FFDADA] w-80 text-red-600 hover:bg-red-200 text-base fon
           </Card>
         </div>
       </div>
+
+      <DeleteAccount onClose={onClose}  open={isOpen}  setOpen={()=>setIsOpen(true)}  />
     </div>
   );
 }

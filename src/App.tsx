@@ -15,6 +15,10 @@ import MyPhoneNumber from "./screens/MyProfile/MyPhoneNunber"
 import MySecurity from "./screens/MyProfile/Security"
 import CarDetailsPage from "./screens/CarDetailsPage"
 import AdPostingForm from "./screens/PostAds/AdPostingForm"
+import SearchPage from "./screens/SearchPage"
+import PublicProfile from "./screens/PublicProfile"
+import PublicAds from "./screens/PublicProfile/PublicAds"
+import PublicReviews from "./screens/PublicProfile/PublicReviews"
 
 const App = () => {
   return (
@@ -22,6 +26,7 @@ const App = () => {
       <NavbarSubsection/>
       <Routes>
         <Route path="/" element={<Home/>} />
+        <Route path="/search" element={<SearchPage/>} />
         <Route path="/notifications" element={<Notifications/>} />
         <Route path="/save-searches" element={<SaveSearches/>} />
         <Route path="/my-favorites" element={<MyFavorites/>} />
@@ -34,6 +39,12 @@ const App = () => {
          <Route path="address" element={<MyAddress />} />
          <Route path="phone" element={<MyPhoneNumber/>} />
         <Route path="security" element={<MySecurity />} /> 
+      </Route>
+
+       <Route path="/public-profile" element={<PublicProfile />}>
+        <Route index element={<PublicAds />} />
+         <Route path="public-reviews" element={<PublicReviews />} />
+         
       </Route>
 
       </Routes>

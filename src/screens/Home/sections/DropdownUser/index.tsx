@@ -77,7 +77,7 @@ const DropdownUser = () => {
         {/* Menu Links */}
         <ul className="px-4 py-3 text-sm text-gray-700">
           <li onClick={()=>setDropdownOpen(false)}><Link to="/my-profile" className="block py-2 hover:text-blue-600">View profile</Link></li>
-          <li><Link to="#" className="block py-2 hover:text-blue-600">public Profile</Link></li>
+          <li><Link to="/public-profile" className="block py-2 hover:text-blue-600">public Profile</Link></li>
           <li className="flex items-center gap-2 py-2 font-medium">
             <img src='./public/verified.png' alt='' />
             <Link to="#">Get Verified</Link>

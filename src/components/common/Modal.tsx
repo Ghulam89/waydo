@@ -34,7 +34,7 @@ export const Modal: React.FC<ModalProps> = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-40 bg-[rgba(0,0,0,0.2)] bg-opacity-50" 
+            className="fixed inset-0  z-40 bg-[#2e3644]" 
             onClick={onClose}
           />
 
@@ -44,21 +44,11 @@ export const Modal: React.FC<ModalProps> = ({
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.95 }}
             transition={{ duration: 0.2 }}
-            className={`fixed z-50 inset-0 bg-white mx-auto rounded-lg shadow-xl ${className}`}
+            className={`fixed z-50 inset-0 bg-white   mx-auto my-auto ${className}`}
           
           >
-            {title && (
-              <div className="flex items-center justify-between p-4 border-b">
-                <h3 className="text-lg font-semibold">{title}</h3>
-                <button
-                  onClick={onClose}
-                  className="text-gray-500 hover:text-gray-700"
-                >
-                  <X className="w-5 h-5" />
-                </button>
-              </div>
-            )}
-            <div className="p-6">{children}</div>
+          
+            <div className="p-6 w-full h-auto">{children}</div>
           </motion.div>
         </>
       )}
