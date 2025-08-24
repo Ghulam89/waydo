@@ -22,10 +22,12 @@ import { Button } from "../../components/ui/button";
 import { NavbarSubsection } from "../Home/sections/NavbarSubsection/NavbarSubsection";
 import { FooterSubsection } from "../Home/sections/FooterSubsection/FooterSubsection";
 import { Card } from "../../components/ui/card";
-import brand from '../../assets/images/brand.png';
-import verified from '../../assets/images/icons/verified.png';
-import map from '../../assets/images/map.png';
-import ads from '../../assets/images/ads.png';
+import brand from "../../assets/images/brand.png";
+import verified from "../../assets/images/icons/verified.png";
+import map from "../../assets/images/map.png";
+import ads from "../../assets/images/ads.png";
+import SimilarAdsSlider from "../../components/SimilarAdsSlider";
+import CarImageGallery from "../../components/common/CarImageGallery";
 const CarDetailsPage = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isFavorited, setIsFavorited] = useState(false);
@@ -80,90 +82,84 @@ const CarDetailsPage = () => {
 
   return (
     <div className="bg-gray-10">
-     
       <div className="max-w-7xl mx-auto px-4 py-6">
-          <div>
-            <ul className=" flex items-center gap-1 text-gray-500 mb-4">
-                <li>
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15 17C14.2005 17.6224 13.1502 18 12 18C10.8498 18 9.79952 17.6224 9 17" stroke="#141B34" stroke-width="1.5" stroke-linecap="round"/>
-<path d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z" stroke="#141B34" stroke-width="1.5" stroke-linejoin="round"/>
-</svg>
-
-                </li>
-                <li>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12L10 8L6 4" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                </li>
-                <li className=" text-black">
-                 Motors
-
-                </li>
-                <li>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 12L10 8L6 4" stroke="#101828" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                </li>
-                  <li className="  text-red-500 font-semibold"> 
-                  Cars
-                </li>
-                
-            </ul>
-          </div>
+        <div>
+          <ul className=" flex items-center gap-1 text-gray-500 mb-4">
+            <li>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M15 17C14.2005 17.6224 13.1502 18 12 18C10.8498 18 9.79952 17.6224 9 17"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                />
+                <path
+                  d="M2.35139 13.2135C1.99837 10.9162 1.82186 9.76763 2.25617 8.74938C2.69047 7.73112 3.65403 7.03443 5.58114 5.64106L7.02099 4.6C9.41829 2.86667 10.6169 2 12 2C13.3831 2 14.5817 2.86667 16.979 4.6L18.4189 5.64106C20.346 7.03443 21.3095 7.73112 21.7438 8.74938C22.1781 9.76763 22.0016 10.9162 21.6486 13.2135L21.3476 15.1724C20.8471 18.4289 20.5969 20.0572 19.429 21.0286C18.2611 22 16.5537 22 13.1388 22H10.8612C7.44633 22 5.73891 22 4.571 21.0286C3.40309 20.0572 3.15287 18.4289 2.65243 15.1724L2.35139 13.2135Z"
+                  stroke="#141B34"
+                  stroke-width="1.5"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12L10 8L6 4"
+                  stroke="#101828"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li className=" text-black">Motors</li>
+            <li>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6 12L10 8L6 4"
+                  stroke="#101828"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </li>
+            <li className="  text-red-500 font-semibold">Cars</li>
+          </ul>
+        </div>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           {/* Left Column - Images and Details */}
           <div className="lg:col-span-2 space-y-6">
             {/* Image Gallery */}
-            <div className="bg-white rounded-xl shadow-sm  overflow-hidden">
-              <div className="relative ">
-                <img
-                  src={carImages[currentImageIndex]}
-                  alt="Car main image"
-                  className="w-full h-96 rounded-xl object-cover"
-                />
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2  hover:bg-red-500 bg-opacity-50 text-white p-2 rounded-full transition-all"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 hover:bg-red-500   text-white p-2 rounded-full transition-all"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
-                <div className="absolute bottom-4 right-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">
-                  {currentImageIndex + 1} / {carImages.length}
-                </div>
-              </div>
+            <CarImageGallery carImages={carImages} />
 
-              {/* Thumbnail Gallery */}
-              <div className="p-4">
-                <div className="flex gap-2 overflow-x-auto">
-                  {carImages.map((image, index) => (
-                    <button
-                      key={index}
-                      onClick={() => setCurrentImageIndex(index)}
-                      className={`flex-shrink-0 w-20 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                        index === currentImageIndex
-                          ? "border-red-500"
-                          : "border-gray-200"
-                      }`}
-                    >
-                      <img
-                        src={image}
-                        alt={`Thumbnail ${index + 1}`}
-                        className="w-full h-full object-cover"
-                      />
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+            <Card className=" p-4">
+              
+              <h2 className=" font-semibold">Virtual Tour</h2>
+             <p className=" text-sm font-semibold text-gray-400">View vehicles from the comfort of your home.</p>
+
+             <div className=" py-2 w-full rounded-lg bg-red-100 mt-3 text-center text-red-600 font-medium">
+              View 360
+             </div>
+            </Card>
 
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
@@ -454,20 +450,31 @@ const CarDetailsPage = () => {
                 <h2 className="text-[30px] font-bold text-gray-900 mb-5">
                   Features
                 </h2>
-               <div className=" flex justify-between items-center">
-                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Drivers Assistance & Safety
-                </h3>
-                <div  className=" flex  gap-2">
+                <div className=" flex justify-between items-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Drivers Assistance & Safety
+                  </h3>
+                  <div className=" flex  gap-2">
                     <div className="  border border-gray-300 rounded-md w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-100">
-                  <p>12</p>
+                      <p>12</p>
+                    </div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                        stroke="#FF0000"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                </div>
-               </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {[
                     "Transmission Type",
@@ -499,20 +506,31 @@ const CarDetailsPage = () => {
                   ))}
                 </div>
 
-                 <div className=" flex justify-between items-center">
-                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  Drivers Assistance & Safety
-                </h3>
-                <div  className=" flex  gap-2">
+                <div className=" flex justify-between items-center">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">
+                    Drivers Assistance & Safety
+                  </h3>
+                  <div className=" flex  gap-2">
                     <div className="  border border-gray-300 rounded-md w-10 h-10 flex items-center justify-center cursor-pointer hover:bg-gray-100">
-                  <p>12</p>
+                      <p>12</p>
+                    </div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9"
+                        stroke="#FF0000"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
                 </div>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 9.00005C18 9.00005 13.5811 15 12 15C10.4188 15 6 9 6 9" stroke="#FF0000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
-                </div>
-               </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {[
                     "Transmission Type",
@@ -551,68 +569,24 @@ const CarDetailsPage = () => {
               <h2 className="text-[30px] font-bold text-gray-900">Location</h2>
               <p className="  text-gray-500 mb-4">London</p>
               <div className="bg-gray-100 rounded-lg  flex items-center justify-center">
-                <img
-                  src={map}
-                  className=" object-cover h-fll w-full"
-                  alt=""
-                />
+                <img src={map} className=" object-cover h-fll w-full" alt="" />
               </div>
             </div>
 
             {/* Related Cars */}
-        <div className="mt-12">
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Similar Cars
-            </h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {relatedCars.map((car) => (
-                <div
-                  key={car.id}
-                  className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
-                >
-                  <img
-                    src={car.image}
-                    alt={car.title}
-                    className="w-full h-48 object-cover"
-                  />
-                  <div className="p-4">
-                    <h3 className="font-semibold text-gray-900 mb-2">
-                      {car.title}
-                    </h3>
-                    <div className="flex items-center justify-between text-sm text-gray-600 mb-3">
-                      <span>{car.year}</span>
-                      <span>{car.mileage}</span>
-                    </div>
-                    <div className="text-xl font-bold text-red-600">
-                      {car.price}
-                    </div>
-                  </div>
-                </div>
-              ))}
+            <div className="mt-12">
+              <SimilarAdsSlider/>
             </div>
           </div>
-        </div>
-          </div>
 
-          {/* Right Column - Seller Info and Actions */}
           <div className="space-y-6">
             {/* Seller Information */}
             <Card className="w-full h-auto  bg-white rounded-lg border border-[#eaecf0] shadow-shadow-sm">
               <div className="flex border-b items-center gap-4 p-4">
                 <div className="w-20 h-20 border p-1  relative rounded-md flex items-center justify-center">
-                  <img
-                    src={brand}
-                    className=" w-full h-full"
-                    alt=""
-                  />
+                  <img src={brand} className=" w-full h-full" alt="" />
                   <div className=" absolute -bottom-2 -left-3">
-                    <img
-                      src={verified}
-                      className=" w-9"
-                      alt=""
-                    />
+                    <img src={verified} className=" w-9" alt="" />
                   </div>
                 </div>
                 <div>
@@ -708,10 +682,7 @@ const CarDetailsPage = () => {
             <img src={ads} className=" w-full" />
           </div>
         </div>
-
-        
       </div>
-     
     </div>
   );
 };

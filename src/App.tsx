@@ -19,7 +19,7 @@ import SearchPage from "./screens/SearchPage"
 import PublicProfile from "./screens/PublicProfile"
 import PublicAds from "./screens/PublicProfile/PublicAds"
 import PublicReviews from "./screens/PublicProfile/PublicReviews"
-
+import Wallet from "./screens/History"
 const App = () => {
   return (
     <div >
@@ -46,6 +46,8 @@ const App = () => {
          <Route path="public-reviews" element={<PublicReviews />} />
          
       </Route>
+
+      <Route path="/wallet" element={<Wallet/>} />
 
       </Routes>
         <FooterSubsection />

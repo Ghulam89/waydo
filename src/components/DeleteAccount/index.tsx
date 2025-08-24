@@ -2,7 +2,13 @@ import { useState } from "react";
 import { Modal } from "../common/Modal";
 import { Button } from "../ui/button";
 
-export default function DeleteAccount({open,setOpen,onClose}) {
+interface DeleteAccountProps {
+  open: boolean;
+  setOpen: (open: boolean) => void;
+  onClose: () => void;
+}
+
+export default function DeleteAccount({ open, setOpen, onClose }: DeleteAccountProps) {
  
 
   const handleDeactivate = () => {
